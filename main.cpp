@@ -1,8 +1,11 @@
 #include <iostream>
+#include "menu.cpp"
+#include "ficha_insumo.cpp"
 
 int main (){
     
-    std::cout << "Hello World!"<< std::endl;
-
+    Menu();
+    std::cout<<"Ate mais!"<<std::endl;
+    
     return 0;
 }
