@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 #include <string.h>
 #define MAX_VACINAS 50
 typedef struct 
@@ -34,12 +33,12 @@ int main()
     int op;
 
 do{
-    printf("Tipo da vacina: ");
+    std::cout<<"Tipo da vacina: "<<std::endl;
     fgets(tipoVacina,sizeof(tipoVacina),stdin);
-    printf("\n Quantidade de Doses: ");
-    scanf("%i", &quantidadeDoses[0]);
-    printf("\n Intervalo de dias: ");
-    scanf("%i", &intervaloDias[0]);
+    std::cout<<"Quantidade de Doses: "<<std::endl;
+    std::cin>>quantidadeDoses[0];
+    std::cout<<"Intervalo de dias: "<<std::endl;
+    std::cin>>intervaloDias[0];
     
 
     for(int i = 0; i < MAX_VACINAS; ++i)
@@ -54,8 +53,9 @@ do{
     }
 
 
-    printf("\n1-Continuar\n0-Sair");
-    scanf("%i", &op);
+    std::cout<<"1-Continuar\n 0-Sair"<<std::endl;
+    std::cin>>op;
+    
 } while(op!=0);
 } 
 
@@ -66,9 +66,9 @@ void menu()
     do
     {
     system("cls");
-    printf("\n 1- Cadastrar Vacina\n 2- Remover Vacina");
-    printf("\n 3- Pesquisar Vacina\n 0 - Sair");
-    scanf("%i", &op);
+    std::cout<<"\n 1- Cadastrar Vacina\n 2- Remover Vacina"<<std::endl;
+    std::cout<<"\n 3- Pesquisar Vacina\n 0 - Sair"<<std::endl;
+    std::cin>>op;
     getchar();
 
      switch(op)
