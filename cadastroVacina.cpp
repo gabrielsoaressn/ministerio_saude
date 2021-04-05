@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string.h>
+#include <ios>
+#include <limits>
 #define MAX_VACINAS 50
 typedef struct 
 {
     char tipoVacina[50];
-    int quantidadeDoses[4];
-    int intervaloDias[50];
+    int quantidadeDoses;
+    int intervaloDias;
     int ativo;
 
 }Vacina;
@@ -28,25 +30,25 @@ int main()
     void cadastrar()
     {
     char tipoVacina[50];
-    int quantidadeDoses[4];
-    int intervaloDias[50];
+    int quantidadeDoses;
+    int intervaloDias;
     int op;
 
 do{
     std::cout<<"Tipo da vacina: "<<std::endl;
     fgets(tipoVacina,sizeof(tipoVacina),stdin);
     std::cout<<"Quantidade de Doses: "<<std::endl;
-    std::cin>>quantidadeDoses[0];
+    std::cin>>quantidadeDoses;
     std::cout<<"Intervalo de dias: "<<std::endl;
-    std::cin>>intervaloDias[0];
+    std::cin>>intervaloDias;
     
 
     for(int i = 0; i < MAX_VACINAS; ++i)
     {
         if(vacinas[i].ativo ==0)
         {
-            vacinas[i].quantidadeDoses[0] = quantidadeDoses[0];
-            vacinas[i].intervaloDias[0] = intervaloDias[0];
+            vacinas[i].quantidadeDoses = quantidadeDoses;
+            vacinas[i].intervaloDias = intervaloDias;
             strcpy(vacinas[i].tipoVacina, tipoVacina);
             break;
         }   
