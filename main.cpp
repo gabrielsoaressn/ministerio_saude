@@ -1,6 +1,5 @@
 #include <iostream>
 #include "menu.cpp"
-#include "ficha_insumo.cpp"
 
 int main (){
     
