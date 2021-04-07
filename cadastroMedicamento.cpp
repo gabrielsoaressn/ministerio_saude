@@ -1,14 +1,7 @@
 #include <iostream>
 #include <string.h>
 #define MAX_MEDICAMENTOS 50
-typedef struct 
-{
-    int dosagem;
-    char administracao[50];
-    char disponibilizacao[50];
-    int ativo;
-
-}Medicamento;
+#include "structMedicamento.cpp"
 
 Medicamento medicamentos[MAX_MEDICAMENTOS];
 

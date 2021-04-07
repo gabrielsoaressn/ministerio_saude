@@ -2,17 +2,11 @@
 #include <string.h>
 #include <ios>
 #include <limits>
+#include "structEPI.cpp"
 
 using namespace std;
 #define MAX_EPI 50
-typedef struct 
-{
-    char tipoEPI[50];
-    int quantidadeEPI;
-    char descricaoEPI[50];
-    int ativo;
 
-}EPI;
 
 EPI epis[MAX_EPI];
 

@@ -2,15 +2,9 @@
 #include <string.h>
 #include <ios>
 #include <limits>
-#define MAX_VACINAS 50
-typedef struct 
-{
-    char tipoVacina[50];
-    int quantidadeDoses;
-    int intervaloDias;
-    int ativo;
+#include "structVacina.cpp"
 
-}Vacina;
+#define MAX_VACINAS 50
 
 Vacina vacinas[MAX_VACINAS];
 
