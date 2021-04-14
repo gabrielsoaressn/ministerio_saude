@@ -6,7 +6,7 @@
 Medicamento medicamentos[MAX_MEDICAMENTOS];
 
 void menu();
-void cadastrar();
+void cadastrarMedicamento();
 
 
 int main()
@@ -18,7 +18,7 @@ int main()
 }
 
 
-    void cadastrar()
+    void cadastrarMedicamento()
     {
     int dosagem;
     char administracao[50];
@@ -68,7 +68,7 @@ void menu()
      switch(op)
     {
             case 1:
-            cadastrar();
+            cadastrarMedicamento();
             break;
     } 
     } while(op != 0); 

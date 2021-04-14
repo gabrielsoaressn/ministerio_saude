@@ -11,7 +11,7 @@ using namespace std;
 EPI epis[MAX_EPI];
 
 void menu();
-void cadastrar();
+void cadastrarEPI();
 
 
 int main()
@@ -23,7 +23,7 @@ int main()
 }
 
 
-    void cadastrar()
+    void cadastrarEPI()
     {
     char tipoEPI[50];
     int quantidadeEPI;
@@ -73,7 +73,7 @@ void menu()
      switch(op)
     {
             case 1:
-            cadastrar();
+            cadastrarEPI();
             break;
     } 
     } while(op != 0); 

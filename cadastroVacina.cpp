@@ -9,7 +9,7 @@
 Vacina vacinas[MAX_VACINAS];
 
 void menu();
-void cadastrar();
+void cadastrarVacina();
 
 
 int main()
@@ -21,7 +21,7 @@ int main()
 }
 
 
-    void cadastrar()
+    void cadastrarVacina()
     {
     char tipoVacina[50];
     int quantidadeDoses;
@@ -70,7 +70,7 @@ void menu()
      switch(op)
     {
             case 1:
-            cadastrar();
+            cadastrarVacina();
             break;
     } 
     } while(op != 0); 
