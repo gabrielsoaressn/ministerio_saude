@@ -5,6 +5,7 @@ typedef struct
     char tipoEPI[50];
     int quantidadeEPI;
     char descricaoEPI[50];
+    int quantidadeDepi;
     int ativo;
 
 }EPI;
