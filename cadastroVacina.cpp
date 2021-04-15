@@ -49,6 +49,7 @@ do{
             vacinas[i].quantidadeDvacina = quantidadeDvacina;
             vacinas[i].intervaloDias = intervaloDias;
             strcpy(vacinas[i].tipoVacina, tipoVacina);
+            vacinas[i].ativo=1;
             break;
         }   
     }
