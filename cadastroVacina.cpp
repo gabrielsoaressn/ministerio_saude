@@ -26,6 +26,7 @@ int main()
     char tipoVacina[50];
     int quantidadeDoses;
     int intervaloDias;
+    int quantidadeDvacina;
     int op;
 
 do{
@@ -35,6 +36,9 @@ do{
     std::cin>>quantidadeDoses;
     std::cout<<"Intervalo de dias: "<<std::endl;
     std::cin>>intervaloDias;
+    std::cout<<"Quantidade de Vacinas: "<<std::endl;
+    std::cin>>quantidadeDvacina;
+    
     
 
     for(int i = 0; i < MAX_VACINAS; ++i)
@@ -42,6 +46,7 @@ do{
         if(vacinas[i].ativo ==0)
         {
             vacinas[i].quantidadeDoses = quantidadeDoses;
+            vacinas[i].quantidadeDvacina = quantidadeDvacina;
             vacinas[i].intervaloDias = intervaloDias;
             strcpy(vacinas[i].tipoVacina, tipoVacina);
             break;

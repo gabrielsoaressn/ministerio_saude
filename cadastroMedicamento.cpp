@@ -21,6 +21,7 @@ int main()
     void cadastrarMedicamento()
     {
     int dosagem;
+    int quantidadeDmedicamento;
     char administracao[50];
     char disponibilizacao[50];
     int op;
@@ -32,6 +33,8 @@ do{
     fgets(disponibilizacao,sizeof(disponibilizacao),stdin);
     std::cout<<"Dosagem do medicamento: "<<std::endl;
     std::cin>>dosagem;
+    std::cout<<"Quantidade de medicamentos: "<<std::endl;
+    std::cin>>quantidadeDmedicamento; 
   
     
 
@@ -42,6 +45,7 @@ do{
             medicamentos[i].dosagem = dosagem;
             strcpy(medicamentos[i].administracao, administracao);
             strcpy(medicamentos[i].disponibilizacao, disponibilizacao);
+            medicamentos[i].quantidadeDmedicamento = quantidadeDmedicamento;
             break;
         }   
     }

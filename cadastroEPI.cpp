@@ -26,7 +26,7 @@ int main()
     void cadastrarEPI()
     {
     char tipoEPI[50];
-    int quantidadeEPI;
+    int quantidadeDepi;
     char descricaoEPI[50];
     int op;
 
@@ -37,14 +37,14 @@ do{
     std::cout<<"Descricao da EPI: "<<std::endl;
     fgets(descricaoEPI,sizeof(descricaoEPI),stdin);
     std::cout<<"Quantidade de EPI: "<<std::endl;
-    std::cin>>quantidadeEPI;
+    std::cin>>quantidadeDepi;
    
 
     for(int i = 0; i < MAX_EPI; ++i)
     {
         if(epis[i].ativo ==0)
         {
-            epis[i].quantidadeEPI = quantidadeEPI;
+            epis[i].quantidadeDepi = quantidadeDepi;
             strcpy(epis[i].tipoEPI, tipoEPI);
             strcpy(epis[i].descricaoEPI, descricaoEPI);
             break;
