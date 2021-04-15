@@ -46,6 +46,7 @@ do{
             strcpy(medicamentos[i].administracao, administracao);
             strcpy(medicamentos[i].disponibilizacao, disponibilizacao);
             medicamentos[i].quantidadeDmedicamento = quantidadeDmedicamento;
+            medicamentos[i].ativo=1;
             break;
         }   
     }
