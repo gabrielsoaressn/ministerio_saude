@@ -47,6 +47,7 @@ do{
             epis[i].quantidadeDepi = quantidadeDepi;
             strcpy(epis[i].tipoEPI, tipoEPI);
             strcpy(epis[i].descricaoEPI, descricaoEPI);
+            epis[i].ativo=1;
             break;
         }   
     }
