@@ -1,9 +1,14 @@
 #include <iostream>
 #include <string.h>
-#define MAX_MEDICAMENTOS 50
+#include <ios>
+#include <limits>
 #include "structMedicamento.cpp"
 
-Medicamento medicamentos[MAX_MEDICAMENTOS];
+#define MAX_MEDICAMENTOS 50 // Variavel global para facilitar o controle dos laços de repetição que executam o cadastro
+
+using namespace std;
+
+Medicamento medicamentos[MAX_MEDICAMENTOS]; 
 
 void menu();
 void cadastrarMedicamento();
@@ -46,7 +51,7 @@ do{
             strcpy(medicamentos[i].administracao, administracao);
             strcpy(medicamentos[i].disponibilizacao, disponibilizacao);
             medicamentos[i].quantidadeDmedicamento = quantidadeDmedicamento;
-            medicamentos[i].ativo=1;
+            medicamentos[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
             break;
         }   
     }

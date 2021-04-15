@@ -4,7 +4,9 @@
 #include <limits>
 #include "structVacina.cpp"
 
-#define MAX_VACINAS 50
+#define MAX_VACINAS 50 // Variavel global para facilitar o controle dos laços de repetição que executam o cadastro
+
+using namespace std;
 
 Vacina vacinas[MAX_VACINAS];
 
@@ -49,7 +51,7 @@ do{
             vacinas[i].quantidadeDvacina = quantidadeDvacina;
             vacinas[i].intervaloDias = intervaloDias;
             strcpy(vacinas[i].tipoVacina, tipoVacina);
-            vacinas[i].ativo=1;
+            vacinas[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
             break;
         }   
     }

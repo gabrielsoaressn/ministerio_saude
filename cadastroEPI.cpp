@@ -4,8 +4,10 @@
 #include <limits>
 #include "structEPI.cpp"
 
+#define MAX_EPI 50 // Variavel global para facilitar o controle dos laços de repetição que executam o cadastro
+
 using namespace std;
-#define MAX_EPI 50
+
 
 
 EPI epis[MAX_EPI];
@@ -47,7 +49,7 @@ do{
             epis[i].quantidadeDepi = quantidadeDepi;
             strcpy(epis[i].tipoEPI, tipoEPI);
             strcpy(epis[i].descricaoEPI, descricaoEPI);
-            epis[i].ativo=1;
+            epis[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
             break;
         }   
     }
