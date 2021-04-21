@@ -1,5 +1,7 @@
+#ifndef CADASTROVACINA_CPP
+#define CONTA_CADASTROVACINA_CPP
+
 #include <iostream>
-#include <string.h>
 #include <ios>
 #include <limits>
 #include "structVacina.cpp"
@@ -25,8 +27,8 @@ int funcCadastroVacina()
 
 
 void cadastrarVacina()
-{
-    string tipoVacina[50];
+{   
+    string tipoVacina;
     int quantidadeDoses;
     int intervaloDias;
     int quantidadeDvacina;
@@ -34,7 +36,7 @@ void cadastrarVacina()
 
     do{
         std::cout<<"Tipo da vacina: "<<std::endl;
-        getline(cin, tipoVacina[50]);
+        cin >> tipoVacina;
         std::cout<<"Quantidade de Doses: "<<std::endl;
         std::cin>>quantidadeDoses;
         std::cout<<"Intervalo de dias: "<<std::endl;
@@ -49,12 +51,12 @@ void cadastrarVacina()
             if(vacinas[i].ativo == 0)
             {
                 vacinas[i].quantidadeDoses = quantidadeDoses;
-                cout<<"quantidade de doses cadastrada = \n"<<vacinas[i].quantidadeDoses;
+                cout<<"quantidade de doses cadastrada = "<<vacinas[i].quantidadeDoses<< endl;
                 vacinas[i].quantidadeDvacina = quantidadeDvacina;
                 cout<<"quantidade de vacinas cadastradas = "<<vacinas[i].quantidadeDvacina<<endl;
                 vacinas[i].intervaloDias = intervaloDias;
                 cout<<"intervalo cadastrado = "<<vacinas[i].intervaloDias<<endl;
-                vacinas[i].tipoVacina[50] = tipoVacina[50];
+                vacinas[i].tipoVacina = tipoVacina;
                 cout<<"tipo cadastrado = "<<vacinas[i].tipoVacina<<endl;
                 vacinas[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
                 if(vacinas[i].ativo==1)
@@ -64,7 +66,7 @@ void cadastrarVacina()
         }
 
 
-    std::cout<<"1-Continuar\n 0-Sair"<<std::endl;
+    std::cout<<" 1-Continuar\n 0-Sair"<<std::endl;
     std::cin>>op;
     
     }while(op!=0);
@@ -91,3 +93,4 @@ void menuCadastroVacina()
     } while(op != 0); 
 
 }
+#endif
