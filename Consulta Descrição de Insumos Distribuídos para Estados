@@ -1,0 +1,61 @@
+void Insumos::ConsultaDescricaoInsumosDistribuidosParaEstados(){
+
+    int y, descricao;
+
+    cout << "Essa funcao consulta as descricoes dos Insumos Distribuidos para os Estados" << endl;
+    cout << "Desejas consultar alguma descricao em especifico?" << endl;
+    cout << "Digite 1 para Sim e 0 para Nao"<< endl;
+    cin >> y;
+
+    while(true){
+        if (y == 1){
+            cout << "Digite o Insumo que desejas consultar a descricao: " << endl;;
+            cout<<" 1- Vacina" << endl;
+            cout<<" 2- EPI" << endl;
+            cout<<" 3- Medicamento" << endl;
+            cin >> descricao;
+
+            switch (descricao){
+                case 1:{
+                    cout << "Descricao das Vacinas: " << endl;
+                    cout << variavelDaDescricaoVacina << endl;
+                        break;
+                }
+                case 2:{
+                    cout << "Descricao dos EPIs: " << endl;
+                    cout << variavelDaDescricaoEPI << endl;
+                        break;
+                }
+                case 3:{
+                    cout << "Descricao dos Medicamentos: " << endl;
+                    cout << variavelDaDescricaoMedicamento << endl;
+                        break;
+                }
+                default:{
+                    cout << "Input Invalido" << endl;
+                        break;
+                }
+            }
+            break;
+        }
+
+        if(y == 0){
+
+            cout << "Lista de Todas as Descriçoes dos Insumos Distribuidos para Estados" << endl;
+            cout << "Descricao das Vacinas: " << endl;
+            cout << variavelDaDescricaoVacina << endl;
+            cout << "Descricao dos EPIs: " << endl;
+            cout << variavelDaDescricaoEPI << endl;
+            cout << "Descricao dos Medicamentos: " << endl;
+            cout << variavelDaDescricaoMedicamento << endl;
+
+            break;
+        }
+
+        if(y != 1 && y != 0){
+            cout << "Digite um numero valido\n" << endl;
+            cout << "Digite 1 para Sim e 0 para Nao" << endl;
+            cin >> y;
+        }
+    }
+}
