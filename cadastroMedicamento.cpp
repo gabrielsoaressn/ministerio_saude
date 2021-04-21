@@ -71,7 +71,7 @@ void menuCadastroMedicamento()
     {
         system("cls");
         std::cout<<"\n 1- Cadastrar Medicamento\n 2- Remover Medicamento"<<std::endl;
-        std::cout<<"3- Pesquisar Medicamento\n 0 - Sair"<<std::endl;
+        std::cout<<" 3- Pesquisar Medicamento\n 0 - Sair"<<std::endl;
         std::cin>>op;
         getchar();
 

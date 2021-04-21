@@ -6,15 +6,16 @@ using namespace std;
 void menuEnviarInsumo(void);
 void enviarInsumo(int quantidade, string nomeDoEstado[2], string tipo[50], int select);
 
-int main (){
+/*int main (){
        menuEnviarInsumo();
        return 0;
-}
+}*/
+
 
 void menuEnviarInsumo(){
     int op1, i, quantidade, select;
     string tipoVacina[50], nomeDoEstado[2], tipoEPI[50], tipoMedicamento[50];
-
+    
     do{   
         cout<<" 1- Enviar Insumo"<< endl;
         cout<<" 0- Sair"<< endl;
@@ -66,7 +67,8 @@ void menuEnviarInsumo(){
          }
 
 
-    }
+    }else
+    break;
 
     
     }while(op1=!0);

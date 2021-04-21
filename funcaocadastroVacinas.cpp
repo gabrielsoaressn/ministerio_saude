@@ -2,10 +2,11 @@
 #include <string.h>
 #include <ios>
 #include <limits>
+#include "structVacina.cpp"
 #define MAX_VACINAS 50
 
 using namespace std;
-
+Vacina vacinas[MAX_VACINAS];
 
 void cadastrar()
     {
@@ -31,7 +32,7 @@ do{
         {
             vacinas[i].quantidadeDoses = quantidadeDoses;
             vacinas[i].intervaloDias = intervaloDias;
-            strcpy(vacinas[i].tipoVacina, tipoVacina);
+            vacinas[i].tipoVacina[50], tipoVacina[50];
             vacinas[i].ativo=1;
             break;
             /*esses laços são para gravar os dados que o usuario entrou*/

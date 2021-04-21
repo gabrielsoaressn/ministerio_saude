@@ -3,6 +3,7 @@
 #include <ios>
 #include <limits>
 #include "structVacina.cpp"
+#include <string>
 
 #define MAX_VACINAS 50 // Variavel global para facilitar o controle dos laços de repetição que executam o cadastro
 
@@ -25,7 +26,7 @@ int funcCadastroVacina()
 
 void cadastrarVacina()
 {
-    char tipoVacina[50];
+    string tipoVacina[50];
     int quantidadeDoses;
     int intervaloDias;
     int quantidadeDvacina;
@@ -33,7 +34,7 @@ void cadastrarVacina()
 
     do{
         std::cout<<"Tipo da vacina: "<<std::endl;
-        fgets(tipoVacina,sizeof(tipoVacina),stdin);
+        getline(cin, tipoVacina[50]);
         std::cout<<"Quantidade de Doses: "<<std::endl;
         std::cin>>quantidadeDoses;
         std::cout<<"Intervalo de dias: "<<std::endl;
@@ -45,13 +46,19 @@ void cadastrarVacina()
 
         for(int i = 0; i < MAX_VACINAS; ++i)
         {
-            if(vacinas[i].ativo ==0)
+            if(vacinas[i].ativo == 0)
             {
                 vacinas[i].quantidadeDoses = quantidadeDoses;
+                cout<<"quantidade de doses cadastrada = \n"<<vacinas[i].quantidadeDoses;
                 vacinas[i].quantidadeDvacina = quantidadeDvacina;
+                cout<<"quantidade de vacinas cadastradas = "<<vacinas[i].quantidadeDvacina<<endl;
                 vacinas[i].intervaloDias = intervaloDias;
+                cout<<"intervalo cadastrado = "<<vacinas[i].intervaloDias<<endl;
                 vacinas[i].tipoVacina[50] = tipoVacina[50];
+                cout<<"tipo cadastrado = "<<vacinas[i].tipoVacina<<endl;
                 vacinas[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
+                if(vacinas[i].ativo==1)
+                    cout<<"cadastrado com sucesso"<<endl; 
                 break;
             }   
         }
@@ -70,7 +77,7 @@ void menuCadastroVacina()
     do
     {
         system("cls");
-        std::cout<<"\n 1- Cadastrar Vacina\n 2- Remover Vacina"<<std::endl;
+        std::cout<<"\n 1- Cadastrar Vacina\n 2- Remover Vacina";
         std::cout<<"\n 3- Pesquisar Vacina\n 0 - Sair"<<std::endl;
         std::cin>>op;
         getchar();

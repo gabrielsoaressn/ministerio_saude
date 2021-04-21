@@ -1,8 +1,8 @@
 #include <iostream>
-#include "cadastroMedicamento.cpp"
+#include "mostraInsumosporTipo.cpp"
 
 void Menu(void){
-    int select, sel1, sel2, sel3, sel4, sel5;
+    int select, sel1, sel2, sel3, sel4, sel5, sel6;
    
     while(1){
         std::cout<<"\n\n------------MENU------------\n"<<std::endl;
@@ -25,25 +25,23 @@ void Menu(void){
                 std::cin >> sel1;
                 switch (sel1){
                 case 1:{
-                    std::cout<<"quantidade : ";
-                    //std::cin>> aqui coloca a função que cadastra
-                    break;
+                    menuCadastroVacina();
+                    continue;
                 }
                 case 2:{
-                    std::cout<<"quantidade : ";
-                    //std::cin>> aqui coloca a função que cadastra
-                    break;
+                    menuCadastroMedicamento();
+                    continue;
                 }
                 case 3:{
-                    std::cout<<"quantidade : ";
-                    //std::cin>> aqui coloca a função que cadastra
-                    break;
+                    menuCadastroEPI();
+                    continue;
                 }
                 case 4:{
                     continue;
                 }
                 break;
              
+                }
             }
             case 2:{
                 std::cout <<"vc deseja consultar"<<std::endl;
@@ -51,7 +49,7 @@ void Menu(void){
                 std::cout <<"2)enviados"<<std::endl;
 
                 std::cin >> sel2;
-                switch (sel2)                {
+                switch (sel2){
                 case 1:{
                     std::cout <<"--------estoque--------"<<std::endl;
                     std::cout <<"1)todos os insumos"<<std::endl;
@@ -76,56 +74,43 @@ void Menu(void){
                         break;
                     
                     default:
-                        break;
+                        continue;
                     }
                     
-                }
+                
                     break;
                 
                 default:
                     break;
-                }
-            case 3:{
-                std::cout <<"que tipo de insumo?"<<std::endl;
-                std::cout <<"1)vacinas"<<std::endl;
-                std::cout <<"2)medicamentos"<<std::endl;
-                std::cout <<"3)EPI"<<std::endl;
-                std::cout <<"4)Voltar"<<std::endl;                
                 
-                std::cin>>sel4;
-                switch (sel4)
+                break;
+            }
+            case 2:
+            {
+                std::cout << "1) por estado"<<std::endl;
+                std::cout << "2) por tipo"<<std::endl;
+                std::cin >> sel5;
+                switch(sel5)
                 {
-                case 1:{
-                    std::cout <<"enviar vacinas"<<std::endl;
-                    std::cout <<"quantidade: "<<std::endl;
-                    //std::cin << (variável que serve de parâmetro para a função que envia)
-                    std::cout <<"estado: "<<std::endl;
-                    //std::cin << (variável que serve de parâmetro para a função que envia)
-                    //função que envia vacinas
+                case 1:
+                //funçã que printa por estado
                     break;
-                }
-                case 2:{
-                    std::cout <<"enviar medicamentos"<<std::endl;
-                    std::cout <<"quantidade: "<<std::endl;
-                    //std::cin << (variável que serve de parâmetro para a função que envia)
-                    std::cout <<"estado: "<<std::endl;
-                    //std::cin << (variável que serve de parâmetro para a função que envia)
-                    //função que envia medicamentos
-                    break;
-                }
-                case 3:{
-                    std::cout <<"enviar EPIs"<<std::endl;
-                    std::cout <<"quantidade: "<<std::endl;
-                    //std::cin << (variável que serve de parâmetro para a função que envia)
-                    std::cout <<"estado: "<<std::endl;
-                    //std::cin << (variável que serve de parâmetro para a função que envia)
-                    //função que envia EPIs
-                    break;
-                }
-                   default:
+                case 2:
+                    std::cout<< "1) Mostrar vacinas enviadas a cada estado" <<endl;
+                    std::cout<< "2) Mostrar medicamentos enviados a cada estado" <<endl;
+                    std::cout<< "3) Mostrar EPIs enviados a cada estado" <<endl;
+                    std::cin>> sel6;
+                    ConsultaInsumoPorTipo(sel6);
+                    default:
                     break;
                 }
             }
+            }
+            case 3:{
+                menuEnviarInsumo();
+            
+                    break;
+                }
             default:
             break;
         }

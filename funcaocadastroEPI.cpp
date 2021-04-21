@@ -2,11 +2,12 @@
 #include <string.h>
 #include <ios>
 #include <limits>
+#include "structEPI.cpp"
 
 using namespace std;
 #define MAX_EPI 50
 
-
+EPI epis[MAX_EPI];
 
 void cadastrar()
     {
@@ -30,8 +31,8 @@ do{
         if(epis[i].ativo ==0)
         {
             epis[i].quantidadeEPI = quantidadeEPI;
-            strcpy(epis[i].tipoEPI, tipoEPI);
-            strcpy(epis[i].descricaoEPI, descricaoEPI);
+            epis[i].tipoEPI[50] = tipoEPI[50];
+            epis[i].descricaoEPI[50] =  descricaoEPI[50];
             epis[i].ativo=1;
             break;
             /*esses laços são para gravar os dados que o usuario entrou*/

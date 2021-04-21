@@ -3,9 +3,10 @@
 #include <ios>
 #include <limits>
 #define MAX_MEDICAMENTOS 50
+#include "structMedicamento.cpp"
 
 using namespace std;
-
+Medicamento medicamentos[MAX_MEDICAMENTOS];
 
 void cadastrar()
     {
