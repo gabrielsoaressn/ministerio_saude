@@ -1,0 +1,83 @@
+void Insumos::ConsultaInsumosDistribuidosParaEstados(){
+
+    int x, insumo;
+
+    cout << "Essa funcao consulta os Insumos Distribuidos para Estados" << endl;
+    cout << "Desejas consultar um Insumo em especifico?" << endl;
+    cout << "Digite 1 para Sim e 0 para Nao"<< endl;
+    cin >> x;
+
+    while(true){
+        if (x == 1){
+            cout << "Digite o Insumo que desejas consultar: " << endl;
+            cout<<" 1- Vacina" << endl;
+            cout<<" 2- EPI" << endl;
+            cout<<" 3- Medicamento" << endl;
+            cin >> insumo;
+
+            switch (insumo){
+                case 1:{
+                    if (variavelDaQuantidadeTotalVacinas != 0){
+                        cout << "A quantidade de doses de Vacina distribuidas para os Estados eh: "
+                             << variavelDaQuantidadeTotalVacinas << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                                break;
+                    }else{
+                        cout << "Nenhuma Vacina foi distribuida" << endl;
+                        break;
+                    }
+                }
+                case 2:{
+                    if (variavelDaQuantidadeTotalEPI != 0){
+                        cout << "A quantidade de EPI distribuidas para os Estados eh: "
+                             << variavelDaQuantidadeTotalEPI << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                                break;
+                    }else{
+                        cout << "Nenhum EPI foi distribuido" << endl;
+                        break;
+                    }
+                }
+                case 3:{
+                    if (variavelDaQuantidadeTotalMedicamentos != 0){
+                        cout << "A quantidade de Medicamentos distribuidos para os Estados eh: "
+                             << variavelDaQuantidadeTotalMedicamentos << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                                break;
+                    }else{
+                        cout << "Nenhum Medicamento foi distribuido" << endl;
+                        break;
+                    }
+                }
+                default: {
+                    cout << "Input Invalido" << endl;
+                }
+            }
+            break;
+        }
+
+        if(x == 0){
+
+            cout << "Lista Geral dos Insumos Distribuidos para Estados" << endl;
+                if(variavelDaQuantidadeTotalVacinas != 0){
+                    cout << "Quantidade de Vacinas: " << variavelDaQuantidadeTotalVacinas << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                }else{
+                    cout << "Nenhuma Vacina foi Distribuida." << endl;
+                }
+                if(variavelDaQuantidadeTotalEPI != 0){
+                    cout << "Quantidade de EPI: " << variavelDaQuantidadeTotalEPI << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                }else{
+                    cout << "Nenhum EPI foi Distribuido." << endl;
+                }
+                if(variavelDaQuantidadeTotalMedicamentos != 0){
+                    cout << "Quantidade de Medicamento: " << variavelDaQuantidadeTotalMedicamentos << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                }else{
+                    cout << "Nenhum Medicamento foi Distribuido." << endl;
+                }
+            break;
+        }
+
+        if(x != 1 && x != 0){
+            cout << "Digite um numero valido\n" << endl;
+            cout << "Digite 1 para Sim e 0 para Nao" << endl;
+            cin >> x;
+        }
+    }
+}

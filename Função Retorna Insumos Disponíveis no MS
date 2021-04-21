@@ -1,0 +1,30 @@
+void Insumos::RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
+
+     if (quantidadeDoses != 0){ //Para Vacina
+        cout << "Doses de Vacinas Disponiveis no Estoque do MS" << endl;
+        cout << "Quantidade: " << quantidadeDoses << endl;
+        //return 1;
+    }else{
+        cout << "Vacinas estao Indisponiveis no Estoque do MS" << endl;
+        //return 0;
+    }
+
+    if (quantidadeEPI != 0){ //Para EPI
+        cout << "EPI Disponivel no Estoque do MS" << endl;
+        cout << "Quantidade: " << quantidadeEPI << endl;
+        //return 1; //Não sei o que necessariamente precisa ser retornado
+    }else{
+        cout << "EPI Indisponivel no Estoque do MS" << endl;
+        //return 0;
+    }
+
+    if (quantidadeDmedicamento != 0){ //Para Medicamento
+        cout << "Medicamentos Disponivel no Estoque do MS" << endl;
+        cout << "Quantidade: " << quantidadeDmedicamento << endl;
+        //return 1;
+    }else{
+        cout << "Medicamentos Indisponiveis no Estoque do MS" << endl;
+        //return 0;
+    }
+
+}
