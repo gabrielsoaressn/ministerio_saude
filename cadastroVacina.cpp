@@ -28,7 +28,7 @@ int funcCadastroVacina()
 
 void cadastrarVacina()
 {   
-    string tipoVacina;
+    std::string tipoVacina;
     int quantidadeDoses;
     int intervaloDias;
     int quantidadeDvacina;

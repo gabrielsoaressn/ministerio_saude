@@ -1,10 +1,16 @@
 #include <iostream>
 #include "menu.cpp"
+#include <string>
+
+
+using namespace std;
+
 
 int main (){
-    
+ 
     Menu();
-    std::cout<<"Ate mais!"<<std::endl;
-    
+    system("clear");
+    cout << "Ate mais!"<< endl;
+
     return 0;
 }
