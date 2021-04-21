@@ -10,13 +10,13 @@ using namespace std;
 
 Vacina vacinas[MAX_VACINAS];
 
-void menu();
+void menuCadastroVacina();
 void cadastrarVacina();
 
 
 int funcCadastroVacina()
 {
-    menu();
+    menuCadastroVacina();
 
 
     return 0;

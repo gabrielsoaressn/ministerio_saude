@@ -12,14 +12,14 @@ using namespace std;
 
 EPI epis[MAX_EPI];
 FILE *arqEPI;
-void menu();
+void menuCadastroEPI();
 void cadastrarEPI();
-void armazenarEPI();
+//void armazenarEPI(); função criada com o intuito de salvar os EPIS no arquivo e suspensa devido às dificuldades
 
 
 int funcCadastroEPI()
 {
-    menu();
+    menuCadastroEPI();
 
 
     return 0;
@@ -291,7 +291,7 @@ void menuCadastroEPI()
     {
             case 1:
             cadastrarEPI();
-            armazenarEPI();
+            //armazenarEPI();
             break;
     } 
     } while(op != 0); 

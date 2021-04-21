@@ -10,13 +10,13 @@ using namespace std;
 
 Medicamento medicamentos[MAX_MEDICAMENTOS]; 
 
-void menu();
+void menuCadastroMedicamento();
 void cadastrarMedicamento();
 
 
 int funcCadastroMedicamento()
 {
-    menu();
+    menuCadastroMedicamento();
 
 
     return 0;

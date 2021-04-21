@@ -1,7 +1,7 @@
 #include <iostream>
-#include "structMedicamento.cpp"
-#include "structEPI.cpp"
-#include "structVacina.cpp"
+#include "cadastroMedicamento.cpp"
+#include "cadastroEPI.cpp"
+#include "cadastroVacina.cpp"
 
 
 typedef struct

@@ -1,16 +1,13 @@
 #include <iostream>
-#include "cadastroVacina.cpp"
 #include "structEstado.cpp"
-#include "cadastroEPI.cpp"
-#include "cadastroMedicamento.cpp"
 
 using namespace std;
 
-void menu(void);
+void menuEnviarInsumo(void);
 void enviarInsumo(int quantidade, string nomeDoEstado[2], string tipo[50], int select);
 
 int main (){
-       menu();
+       menuEnviarInsumo();
        return 0;
 }
 
@@ -32,22 +29,22 @@ void menuEnviarInsumo(){
             switch (select){
             case 1:{
                 cout<<"Que tipo de vacina?"<<endl;
-                cin >> tipoVacina[50];
+                getline(cin, tipoVacina[50]);
                 cout << "Quantidade: ";
                 cin >> quantidade;
                 cout <<"\nEstado: ";
-                cin >> nomeDoEstado[2];
+                getline(cin, nomeDoEstado[2]);
                 enviarInsumo(quantidade, nomeDoEstado, tipoVacina, 1);
                 break;
             }
         
             case 2:{
                 cout<<"Que tipo de EPI?"<<endl;
-                cin >> tipoEPI[50];
+                getline(cin, tipoEPI[50]);
                 cout << "Quantidade: ";
                 cin >> quantidade;
                 cout <<"\nEstado: ";
-                cin >> nomeDoEstado[2];
+                getline(cin, nomeDoEstado[2]);
                 enviarInsumo(quantidade, nomeDoEstado, tipoVacina, 2);
                 break;
 
@@ -55,11 +52,11 @@ void menuEnviarInsumo(){
 
             case 3:{
                 cout<<"Qual o nome do medicamento?"<<endl;
-                cin >> tipoMedicamento[50];
+                getline(cin, tipoMedicamento[50]);
                 cout << "Quantidade: ";
                 cin >> quantidade;
                 cout <<"\nEstado: ";
-                cin >> nomeDoEstado[2];
+                getline(cin, nomeDoEstado[2]);
                 enviarInsumo(quantidade, nomeDoEstado, tipoVacina, 3);
                 break;
                     
