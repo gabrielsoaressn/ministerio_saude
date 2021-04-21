@@ -2,6 +2,7 @@
 #include <string.h>
 #include <ios>
 #include <limits>
+#include "cadastroEPI.cpp"
 
 using namespace std;
 #define MAX_EPI 50
