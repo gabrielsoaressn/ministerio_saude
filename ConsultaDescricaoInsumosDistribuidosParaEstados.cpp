@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "transferirInsumo.cpp"
+
+#include "ConsultaInsumosDistribuidosParaEstados.cpp"
 
 using namespace std;
 

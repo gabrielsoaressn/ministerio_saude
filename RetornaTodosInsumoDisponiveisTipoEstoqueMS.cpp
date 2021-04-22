@@ -4,9 +4,9 @@
 #include <iostream>
 #include <string>
 
-#include "cadastroVacina.cpp"
-#include "cadastroMedicamento.cpp"
-#include "cadastroEPI.cpp"
+//#include "ConsultaInsumosDistribuidosParaEstados.cpp"
+
+#include "mostraInsumosPorTipo.cpp"
 
 using namespace std;
 

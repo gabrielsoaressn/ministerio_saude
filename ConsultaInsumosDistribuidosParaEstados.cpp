@@ -3,11 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "transferirInsumo.cpp"
-#include "structEstado.cpp"
-#include "consultarMedicamento.cpp"
-#include "consultarEPI.cpp"
-#include "consultarVacina.cpp"
+
+#include "ConsultaInsumosDistribuidosParaEstados.cpp"
 
 using namespace std;
 

@@ -2,7 +2,9 @@
 #define MENU_CPP
 
 #include <iostream>
-#include "mostraInsumosPorTipo.cpp"
+
+#include "RetornaTodosInsumoDisponiveisTipoEstoqueMS.cpp"
+
 
 void Menu(void){
     int select, sel1, sel2, sel3, sel4, sel5, sel6;
@@ -43,6 +45,9 @@ void Menu(void){
                 case 4:{
                     continue;
                 }
+                default:{
+                    continue;
+                }
                 break;
 
                 }
@@ -66,15 +71,17 @@ void Menu(void){
                     switch (sel3)
                     {
                     case 1:
-                        //func q printa todos os insumos
-                    case 2:
+                        RetornaTodosInsumoDisponiveisTipoEstoqueMS();
+                    case 2:{
                         consultarVacina();
                         system("pause");
                         continue;
-                    case 3:
+                    }
+                    case 3:{
                         consultarMedicamento();
                         system("pause");
                         continue;
+                    }
                     case 4:
                         consultarEPI();
                         system("pause");
@@ -94,8 +101,11 @@ void Menu(void){
             }
             case 2:
             {
-                std::cout << "1) por estado"<<std::endl;
-                std::cout << "2) por tipo"<<std::endl;
+                std::cout << "-------enviados-------" << std::endl;
+                std::cout << "1) por estado (Estado como parametro)"<<std::endl;
+                std::cout << "2) por estado (Geral)" <<std::endl;
+                std::cout << "3) por tipo"<<std::endl;
+                std::cout << "4) descricao" <<std::endl;
                 std::cin >> sel5;
                 switch(sel5)
                 {
@@ -104,11 +114,21 @@ void Menu(void){
                     std::cin>>nomeDoEstado;
                     consultaInsumosEnviadosPorEstado(nomeDoEstado);
                     continue;
+                case 2:{
+                    ConsultaInsumosDistribuidosParaEstados();
+                    continue;
                 }
-                case 2:
+                }
+                case 3:{
                     consultaInsumosEnviadosPorTipo();
                     continue;
-                    default:
+
+                }
+                case 4:{
+                    ConsultaDescricaoInsumosDistribuidosParaEstados();
+                    continue;
+                }
+                default:
                     break;
                 }
             }

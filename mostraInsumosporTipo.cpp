@@ -24,7 +24,7 @@ void consultaInsumosEnviadosPorTipo(){
     for(int j = 0; j<27; j++){
         for(int i = 0; i < MAX_VACINAS; ++i )
         {
-            if(vacinas[i].ativo==1)
+            if(estados[j].vacinasDoEstado[i].ativo == 1)
             {
                 std::cout<<"---------------\n"<<std::endl;
                 std::cout<<"Estado: "<< estados[j].nome<<endl;
@@ -32,11 +32,11 @@ void consultaInsumosEnviadosPorTipo(){
                 std::cout<<"Dose da vacina: "<< estados[j].vacinasDoEstado[i].quantidadeDoses<<endl;
                 std::cout<<"Intervalo entre as doses: "<< estados[j].vacinasDoEstado[i].intervaloDias<<endl;
                 std::cout<<"Quantidade de vacinas: "<< estados[j].vacinasDoEstado[i].quantidadeDvacina<<endl;
-                
+
                 //Saori alterando aqui
                 std::cout << "Fabricante: " << estados[j].vacinasDoEstado[i].fabricante << endl;
                 std::cout << "Data de Vencimento: " << estados[j].vacinasDoEstado[i].dataVenc << endl;
-                
+
                 std::cout<<"\n---------------\n"<<std::endl;
             }
         }
@@ -60,11 +60,11 @@ void consultaInsumosEnviadosPorTipo(){
                     std::cout<<"Administracao do medicamento: "<< estados[j].medicamentosDoEstado[i].administracao<<endl;
                     std::cout<<"Dosagem do medicamento: "<< estados[j].medicamentosDoEstado[i].dosagem<<endl;
                     std::cout<<"Quantidade do medicamento: "<< estados[j].medicamentosDoEstado[i].quantidadeDmedicamento<<endl;
-                    
+
                     //Saori alterando aqui
                     std::cout << "Fabricante: " << estados[j].medicamentosDoEstado[i].fabricante << endl;
                     std::cout << "Data de Vencimento: " << estados[j].medicamentosDoEstado[i].dataVenc << endl;
-                    
+
                     std::cout<<"\n---------------\n"<<std::endl;
 
                 }
@@ -88,11 +88,11 @@ void consultaInsumosEnviadosPorTipo(){
                     std::cout<<"Tipo da EPI: "<< estados[j].episDoEstado[i].tipoEPI<<endl;
                     std::cout<<"Descricao da EPI: "<< estados[j].episDoEstado[i].descricaoEPI<<endl;
                     std::cout<<"Quantidade da EPI: "<< estados[j].episDoEstado[i].quantidadeDepi<<endl;
-                    
+
                     //Saori alterando aqui
                     std::cout << "Fabricante: " << estados[j].episDoEstado[i].fabricante << endl;
                     std::cout << "Data de Vencimento: " << estados[j].episDoEstado[i].dataVenc << endl;
-                    
+
                     std::cout<<"\n---------------\n"<<std::endl;
 
                 }
