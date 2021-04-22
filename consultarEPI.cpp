@@ -26,6 +26,11 @@ void consultarEPI()
         std::cout<<"Tipo da EPI: "<< epis[i].tipoEPI<<endl;
         std::cout<<"Descricao da EPI: "<< epis[i].descricaoEPI<<endl;
         std::cout<<"Quantidade da EPI: "<< epis[i].quantidadeDepi<<endl;
+            
+        //Saori alternado aqui
+        std::cout << "Fabricante: " << epis[i].fabricante << endl;
+        std::cout << "Data de Vencimento: " << epis[i].dataVenc << endl;
+            
         std::cout<<"\n---------------\n"<<std::endl;
 
         }
