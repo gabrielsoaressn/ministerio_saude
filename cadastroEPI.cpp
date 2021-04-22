@@ -36,8 +36,10 @@ int funcCadastroEPI()
 
 void cadastrarEPI()
 {
+    //Saori aqui colocando as duas variaveis abaixo
     std::string fabricante;
     std::string dataVenc;
+    
     std::string tipoEPI;
     int quantidadeDepi;
     std::string descricaoEPI;
