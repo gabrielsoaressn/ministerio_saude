@@ -19,8 +19,8 @@ void cadastrarEPIs()
 
 do{
     std::cout<<"Tipo de EPI: "<<std::endl;
-    getline(cin, tipoEPI);
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin >> tipoEPI;
+    //cin.ignore(numeric_limits<streamsize>::max(), '\n');
     std::cout<<"Descricao da EPI: "<<std::endl;
     getline(cin, descricaoEPI);
     std::cout<<"Quantidade de EPI: "<<std::endl;
@@ -31,7 +31,7 @@ do{
     {
         if(epis[i].ativo ==0)
         {
-            epis[i].quantidadeEPI = quantidadeEPI;
+           // epis[i].quantidadeEPI = quantidadeEPI;
             epis[i].tipoEPI = tipoEPI;
             epis[i].descricaoEPI =  descricaoEPI;
             epis[i].ativo=1;

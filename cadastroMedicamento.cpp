@@ -1,14 +1,20 @@
+#ifndef CADASTROMEDICAMENTO_CPP
+#define CADASTROMEDICAMENTO_CPP
+
 #include <iostream>
 #include <string.h>
 #include <ios>
 #include <limits>
 #include "structMedicamento.cpp"
+#include <string>
+#include <cstdlib>
+#include <stdio.h>
 
 #define MAX_MEDICAMENTOS 50 // Variavel global para facilitar o controle dos laços de repetição que executam o cadastro
 
 using namespace std;
 
-Medicamento medicamentos[MAX_MEDICAMENTOS]; 
+Medicamento medicamentos[MAX_MEDICAMENTOS];
 
 void menuCadastroMedicamento();
 void cadastrarMedicamento();
@@ -27,51 +33,56 @@ int funcCadastroMedicamento()
     {
     int dosagem;
     int quantidadeDmedicamento;
-    char administracao[50];
-    char disponibilizacao[50];
+    string administracao;
+    string disponibilizacao;
     int op;
+    string nome;
 
     do{
         std::cout<<"Forma de administracao: "<<std::endl;
-        fgets(administracao,sizeof(administracao),stdin);
+        cin >> administracao;
         std::cout<<"Forma de disponibilizacao: "<<std::endl;
-        fgets(disponibilizacao,sizeof(disponibilizacao),stdin);
+        cin >> disponibilizacao;
         std::cout<<"Dosagem do medicamento: "<<std::endl;
         std::cin>>dosagem;
         std::cout<<"Quantidade de medicamentos: "<<std::endl;
-        std::cin>>quantidadeDmedicamento; 
-    
-        
+        std::cin>>quantidadeDmedicamento;
+        cout<<"nome: "<<endl;
+        cin >> nome;
+
+
+
 
         for(int i = 0; i < MAX_MEDICAMENTOS; ++i)
         {
             if(medicamentos[i].ativo ==0)
             {
                 medicamentos[i].dosagem = dosagem;
-                strcpy(medicamentos[i].administracao, administracao);
-                strcpy(medicamentos[i].disponibilizacao, disponibilizacao);
+                medicamentos[i].administracao = administracao;
+                medicamentos[i].disponibilizacao = disponibilizacao;
                 medicamentos[i].quantidadeDmedicamento = quantidadeDmedicamento;
+                medicamentos[i].nome = nome;
                 medicamentos[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
                 break;
-            }   
+            }
         }
 
 
-    std::cout<<"1-Continuar\n 0-Sair"<<std::endl;
+    std::cout<<" 1) Continuar\n 0) Sair"<<std::endl;
     std::cin>>op;
-    
+
 } while(op!=0);
-} 
+}
 
 void menuCadastroMedicamento()
 {
     int op;
-    
+
     do
     {
         system("cls");
-        std::cout<<"\n 1- Cadastrar Medicamento\n 2- Remover Medicamento"<<std::endl;
-        std::cout<<" 3- Pesquisar Medicamento\n 0 - Sair"<<std::endl;
+        std::cout<<"\n 1) Cadastrar Medicamento\n 2) Remover Medicamento"<<std::endl;
+        std::cout<<" 3) Pesquisar Medicamento\n 0) Sair"<<std::endl;
         std::cin>>op;
         getchar();
 
@@ -80,7 +91,8 @@ void menuCadastroMedicamento()
             case 1:
             cadastrarMedicamento();
             break;
-    } 
-    } while(op != 0); 
+    }
+    } while(op != 0);
 
 }
+#endif

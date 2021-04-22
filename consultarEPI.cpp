@@ -1,8 +1,11 @@
+#ifndef CONSULTAREPI_CPP
+#define CONSULTAREPI_CPP
+
 #include <iostream>
 #include <string.h>
 #include <ios>
 #include <limits>
-#include "cadastroEPI.cpp"
+#include "funcaocadastroEPI.cpp"
 
 using namespace std;
 #define MAX_EPI 50
@@ -20,12 +23,13 @@ void consultarEPI()
         if(epis[i].ativo==1)
         {
         std::cout<<"---------------\n"<<std::endl;
-        std::cout<<"Tipo da EPI: \n"<< epis[i].tipoEPI;
-        std::cout<<"Descricao da EPI: \n"<< epis[i].descricaoEPI;
-        std::cout<<"Quantidade da EPI: \n"<< epis[i].quantidadeEPI;
+        std::cout<<"Tipo da EPI: "<< epis[i].tipoEPI<<endl;
+        std::cout<<"Descricao da EPI: "<< epis[i].descricaoEPI<<endl;
+        std::cout<<"Quantidade da EPI: "<< epis[i].quantidadeDepi<<endl;
         std::cout<<"\n---------------\n"<<std::endl;
 
         }
     
     }
 }
+#endif // DEBUG

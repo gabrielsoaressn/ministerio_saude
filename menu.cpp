@@ -1,9 +1,13 @@
+#ifndef MENU_CPP
+#define MENU_CPP
+
 #include <iostream>
-#include "mostraInsumosporTipo.cpp"
+#include "mostraInsumosPorTipo.cpp"
 
 void Menu(void){
     int select, sel1, sel2, sel3, sel4, sel5, sel6;
-   
+    string nomeDoEstado;
+
     while(1){
         std::cout<<"\n\n------------MENU------------\n"<<std::endl;
         std::cout<<"1) Cadastrar"<<std::endl;
@@ -14,7 +18,7 @@ void Menu(void){
         switch(select){
             case 0:
             return;
-            
+
             case 1:{
                 std::cout <<"vc deseja cadastar"<<std::endl;
                 std::cout <<"1)vacinas"<<std::endl;
@@ -25,22 +29,22 @@ void Menu(void){
                 std::cin >> sel1;
                 switch (sel1){
                 case 1:{
-                    menuCadastroVacina();
+                    cadastrarVacina();
                     continue;
                 }
                 case 2:{
-                    menuCadastroMedicamento();
+                    cadastrarMedicamento();
                     continue;
                 }
                 case 3:{
-                    menuCadastroEPI();
+                    cadastrarEPI();
                     continue;
                 }
                 case 4:{
                     continue;
                 }
                 break;
-             
+
                 }
             }
             case 2:{
@@ -62,27 +66,30 @@ void Menu(void){
                     switch (sel3)
                     {
                     case 1:
-                        //função que printa
+                        //func q printa todos os insumos
                     case 2:
-                        //função que printa
-                        break;
+                        consultarVacina();
+                        system("pause");
+                        continue;
                     case 3:
-                        //função que printa
-                        break;
+                        consultarMedicamento();
+                        system("pause");
+                        continue;
                     case 4:
-                        //função que printa
-                        break;
-                    
+                        consultarEPI();
+                        system("pause");
+                        continue;
+
                     default:
                         continue;
                     }
-                    
-                
+
+
                     break;
-                
+
                 default:
                     break;
-                
+
                 break;
             }
             case 2:
@@ -92,24 +99,23 @@ void Menu(void){
                 std::cin >> sel5;
                 switch(sel5)
                 {
-                case 1:
-                //funçã que printa por estado
-                    break;
+                case 1:{
+                    std::cout <<"Estado(2 letras): "<<std::endl;
+                    std::cin>>nomeDoEstado;
+                    consultaInsumosEnviadosPorEstado(nomeDoEstado);
+                    continue;
+                }
                 case 2:
-                    std::cout<< "1) Mostrar vacinas enviadas a cada estado" <<endl;
-                    std::cout<< "2) Mostrar medicamentos enviados a cada estado" <<endl;
-                    std::cout<< "3) Mostrar EPIs enviados a cada estado" <<endl;
-                    std::cin>> sel6;
-                    ConsultaInsumoPorTipo(sel6);
+                    consultaInsumosEnviadosPorTipo();
+                    continue;
                     default:
                     break;
                 }
             }
             }
             case 3:{
-                menuEnviarInsumo();
-            
-                    break;
+                menuTransferirInsumo();
+                continue;
                 }
             default:
             break;
@@ -118,3 +124,5 @@ void Menu(void){
     return;
     }
 }
+
+#endif

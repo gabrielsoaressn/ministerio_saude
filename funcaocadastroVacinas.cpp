@@ -1,38 +1,42 @@
+#ifndef FUNCAOCADASTROVACINAS_CPP 
+#define FUNCAOCADASTROVACINAS_CPP
+
+
 #include <iostream>
 #include <string.h>
 #include <ios>
 #include <limits>
-#include "structVacina.cpp"
-#define MAX_VACINAS 50
+#include "cadastroVacina.cpp"
+#include <string>
+
 
 using namespace std;
-Vacina vacinas[MAX_VACINAS];
 
-void cadastrar()
+void cadastrarVacinas()
     {
-    char tipoVacina[50];
+    string tipoVacina;
     int quantidadeDoses;
     int intervaloDias;
     int op;
 
-do{
-    std::cout<<"Tipo da vacina: "<<std::endl;
-    fgets(tipoVacina,sizeof(tipoVacina),stdin);
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    std::cout<<"Quantidade de Doses: "<<std::endl;
-    std::cin>>quantidadeDoses;
-    std::cout<<"Intervalo de dias: "<<std::endl;
-    std::cin>>intervaloDias;
+    do{
+        std::cout<<"Tipo da vacina: "<<std::endl;
+        getline(cin, tipoVacina);
+        //cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cout<<"Quantidade de Doses: "<<std::endl;
+        std::cin>>quantidadeDoses;
+        std::cout<<"Intervalo de dias: "<<std::endl;
+        std::cin>>intervaloDias;
     /* pegar os dados do usuario, o cin.ignore é para debugar um erro no printf */
     
 
     for(int i = 0; i < MAX_VACINAS; ++i)
     {
-        if(vacinas[i].ativo ==0)
+        if(vacinas[i].ativo == 0)
         {
             vacinas[i].quantidadeDoses = quantidadeDoses;
             vacinas[i].intervaloDias = intervaloDias;
-            vacinas[i].tipoVacina[50], tipoVacina[50];
+            vacinas[i].tipoVacina, tipoVacina;
             vacinas[i].ativo=1;
             break;
             /*esses laços são para gravar os dados que o usuario entrou*/
@@ -44,4 +48,5 @@ do{
     std::cin>>op;
     
 } while(op!=0);
-} 
+}
+#endif // !1

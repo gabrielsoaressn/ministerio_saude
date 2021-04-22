@@ -1,3 +1,6 @@
+#ifndef CADASTROEPI_CPP
+#define CADASTROEPI_CPP
+
 #include <iostream>
 #include <string.h>
 #include <ios>
@@ -10,8 +13,8 @@ using namespace std;
 
 
 
-EPI epis[MAX_EPI];
-FILE *arqEPI;
+EPI epis[MAX_EPI]; 
+//FILE *arqEPI;
 void menuCadastroEPI();
 void cadastrarEPI();
 //void armazenarEPI(); função criada com o intuito de salvar os EPIS no arquivo e suspensa devido às dificuldades
@@ -28,17 +31,17 @@ int funcCadastroEPI()
 
 void cadastrarEPI()
 {
-    char tipoEPI[50];
+    string tipoEPI;
     int quantidadeDepi;
-    char descricaoEPI[50];
+    string descricaoEPI;
     int op;
 
     do{
         std::cout<<"Tipo de EPI: "<<std::endl;
-        fgets(tipoEPI,sizeof(tipoEPI),stdin);
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> tipoEPI;
+        //cin.ignore(numeric_limits<streamsize>::max(), '\n');
         std::cout<<"Descricao da EPI: "<<std::endl;
-        fgets(descricaoEPI,sizeof(descricaoEPI),stdin);
+        cin >> descricaoEPI;
         std::cout<<"Quantidade de EPI: "<<std::endl;
         std::cin>>quantidadeDepi;
     
@@ -48,17 +51,41 @@ void cadastrarEPI()
             if(epis[i].ativo ==0)
             {
                 epis[i].quantidadeDepi = quantidadeDepi;
-                epis[i].tipoEPI[50] = tipoEPI[50];
-                epis[i].descricaoEPI[50] = descricaoEPI[50];
+                epis[i].tipoEPI = tipoEPI;
+                epis[i].descricaoEPI = descricaoEPI;
                 epis[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
                 break;
             }   
         }
-        std::cout<<"1-Continuar\n 0-Sair"<<std::endl;
+        std::cout<<" 1) Continuar\n 0) Sair"<<std::endl;
         std::cin>>op;
     
     }while(op!=0);
 } 
+
+void menuCadastroEPI()
+{
+    int op;
+    
+    do
+    {
+    system("cls");
+    std::cout<<"\n 1) Cadastrar EPI\n 2) Remover EPI"<<std::endl;
+    std::cout<<" 3) Pesquisar EPI\n 0) Sair"<<std::endl;
+    std::cin>>op;
+    getchar();
+
+     switch(op)
+    {
+            case 1:
+            cadastrarEPI();
+            //armazenarEPI();
+            break;
+    } 
+    } while(op != 0); 
+
+}
+
 /*void armazenarEPI(void)
 {
     arqEPI = fopen("arqVacina.txt", "w");
@@ -106,7 +133,6 @@ void cadastrarEPI()
     fprintf(arqEPI,"quantidade: %d\n", epis[9].quantidadeDepi);
     fprintf(arqEPI,"tipo: %s", epis[9].tipoEPI);
     fprintf(arqEPI,"descricao: %s\n\n", epis[9].descricaoEPI);
-
     
     fprintf(arqEPI,"quantidade: %d\n", epis[10].quantidadeDepi);
     fprintf(arqEPI,"tipo: %s", epis[10].tipoEPI);
@@ -275,25 +301,4 @@ void cadastrarEPI()
     fclose(arqEPI);
 }*/
 
-void menuCadastroEPI()
-{
-    int op;
-    
-    do
-    {
-    system("cls");
-    std::cout<<"\n 1- Cadastrar EPI\n 2- Remover Vacina"<<std::endl;
-    std::cout<<" 3- Pesquisar EPI\n 0 - Sair"<<std::endl;
-    std::cin>>op;
-    getchar();
-
-     switch(op)
-    {
-            case 1:
-            cadastrarEPI();
-            //armazenarEPI();
-            break;
-    } 
-    } while(op != 0); 
-
-}
+#endif

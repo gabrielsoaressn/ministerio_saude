@@ -1,8 +1,12 @@
+#ifndef CONSULTARVACIVA_CPP
+#define CONSULTARVACINA_CPP
+
 #include <iostream>
 #include <string.h>
 #include <ios>
 #include <limits>
 #define MAX_VACINAS 50
+#include "funcaocadastroVacinas.cpp"
 
 using namespace std;
 
@@ -18,9 +22,10 @@ void consultarVacina()
         if(vacinas[i].ativo==1)
         {
         std::cout<<"---------------\n"<<std::endl;
-        std::cout<<"Tipo de vacina: \n"<< vacinas[i].tipoVacina;
-        std::cout<<"Dose da vacina: \n"<< vacinas[i].quantidadeDoses;
-        std::cout<<"Intervalo entre as doses: \n"<< vacinas[i].intervaloDias;
+        std::cout<<"Tipo de vacina: "<< vacinas[i].tipoVacina<<endl;
+        std::cout<<"Dose da vacina: "<< vacinas[i].quantidadeDoses<<endl;
+        std::cout<<"Intervalo entre as doses: "<< vacinas[i].intervaloDias<<endl;
+        std::cout<<"Quantidade de vacinas: "<< vacinas[i].quantidadeDvacina<<endl;
         std::cout<<"\n---------------\n"<<std::endl;
 
         }
@@ -30,3 +35,4 @@ void consultarVacina()
 
 
 }
+#endif

@@ -1,12 +1,16 @@
+#ifndef STRUCTMEDICAMENTO_CPP
+#define STRUCTMEDICAMENTO_CPP
 #include <iostream>
 
 typedef struct 
 {
     int dosagem;
-    char administracao[50];
-    char disponibilizacao[50];
-    std::string nome[50];
+    std::string administracao;
+    std::string disponibilizacao;
+    std::string nome;
     int quantidadeDmedicamento;
     int ativo;
 
 }Medicamento;
+
+#endif

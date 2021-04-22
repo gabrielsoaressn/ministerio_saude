@@ -7,10 +7,9 @@ using namespace std;
 
 
 int main (){
- 
     Menu();
-    system("clear");
+    system("cls");
     cout << "Ate mais!"<< endl;
-
+    
     return 0;
 }

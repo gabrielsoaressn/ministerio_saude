@@ -51,22 +51,17 @@ void cadastrarVacina()
             if(vacinas[i].ativo == 0)
             {
                 vacinas[i].quantidadeDoses = quantidadeDoses;
-                cout<<"quantidade de doses cadastrada = "<<vacinas[i].quantidadeDoses<< endl;
                 vacinas[i].quantidadeDvacina = quantidadeDvacina;
-                cout<<"quantidade de vacinas cadastradas = "<<vacinas[i].quantidadeDvacina<<endl;
                 vacinas[i].intervaloDias = intervaloDias;
-                cout<<"intervalo cadastrado = "<<vacinas[i].intervaloDias<<endl;
                 vacinas[i].tipoVacina = tipoVacina;
-                cout<<"tipo cadastrado = "<<vacinas[i].tipoVacina<<endl;
                 vacinas[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
                 if(vacinas[i].ativo==1)
-                    cout<<"cadastrado com sucesso"<<endl; 
                 break;
             }   
         }
 
 
-    std::cout<<" 1-Continuar\n 0-Sair"<<std::endl;
+    std::cout<<" 1)Continuar\n 0)Sair"<<std::endl;
     std::cin>>op;
     
     }while(op!=0);
@@ -79,8 +74,8 @@ void menuCadastroVacina()
     do
     {
         system("cls");
-        std::cout<<"\n 1- Cadastrar Vacina\n 2- Remover Vacina";
-        std::cout<<"\n 3- Pesquisar Vacina\n 0 - Sair"<<std::endl;
+        std::cout<<"\n 1) Cadastrar Vacina\n 2) Remover Vacina";
+        std::cout<<"\n 3) Pesquisar Vacina\n 0) Sair"<<std::endl;
         std::cin>>op;
         getchar();
 
