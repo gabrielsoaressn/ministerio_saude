@@ -36,6 +36,10 @@ void cadastrarVacina()
     int intervaloDias;
     int quantidadeDvacina;
     int op;
+    
+    //Saori alterando aqui
+    std::string fabricante;
+    std::string dataVenc;
 
     do{
         std::cout<<"Tipo da vacina: "<<std::endl;
@@ -46,6 +50,12 @@ void cadastrarVacina()
         std::cin>>intervaloDias;
         std::cout<<"Quantidade de Vacinas: "<<std::endl;
         std::cin>>quantidadeDvacina;
+        
+        //Saori Alterando aqui
+        std::cout << "Fabricante: " << std::endl;
+        cin >> fabricante;
+        std::cout << "Data de Vencimento: " <<std::endl;
+        cin >> dataVenc;
         
         //Saori aqui de Novo, novamente fazer uma variavel para a minha funcao
         quantidadeTotalVacinasMS += quantidadeDvacina;
@@ -60,6 +70,11 @@ void cadastrarVacina()
                 vacinas[i].intervaloDias = intervaloDias;
                 vacinas[i].tipoVacina = tipoVacina;
                 vacinas[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
+                
+                //Saori alterando aqui
+                vacinas[i].fabricante = fabricante;
+                vacinas[i].dataVenc = dataVenc;
+                
                 if(vacinas[i].ativo==1)
                 break;
             }   
