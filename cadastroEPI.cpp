@@ -14,6 +14,11 @@ using namespace std;
 
 
 EPI epis[MAX_EPI]; 
+
+//Variavel da Saori
+int quantidadeTotalEPIMS;
+
+
 //FILE *arqEPI;
 void menuCadastroEPI();
 void cadastrarEPI();
@@ -44,6 +49,8 @@ void cadastrarEPI()
         cin >> descricaoEPI;
         std::cout<<"Quantidade de EPI: "<<std::endl;
         std::cin>>quantidadeDepi;
+        
+        quantidadeTotalEPIMS += quantidadeDepi;
     
 
         for(int i = 0; i < MAX_EPI; ++i)
