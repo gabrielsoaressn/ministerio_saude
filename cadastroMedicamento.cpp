@@ -40,6 +40,10 @@ int funcCadastroMedicamento()
     string disponibilizacao;
     int op;
     string nome;
+        
+    //Saori aqui colocando as ultimas coisas
+    string fabricante;
+    string dataVenc;
 
     do{
         std::cout<<"Forma de administracao: "<<std::endl;
@@ -50,8 +54,16 @@ int funcCadastroMedicamento()
         std::cin>>dosagem;
         std::cout<<"Quantidade de medicamentos: "<<std::endl;
         std::cin>>quantidadeDmedicamento;
-        cout<<"nome: "<<endl;
+        std::cout<<"nome: "<<endl;
         cin >> nome;
+        
+        //Saori Aqui colocando variaveis
+        std::cout << "Fabricante: " << endl;
+        cin >> fabricante;
+        std::cout << "Data de Vencimento: " << endl;
+        cin >> dataVenc;
+        
+        
         
         //Variavel da Saori
         quantidadeTotalMedicamentosMS += quantidadeDmedicamento;
