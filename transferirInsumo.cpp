@@ -56,6 +56,10 @@ void menuTransferirInsumo(){
                                     estados[i].vacinasDoEstado[a].quantidadeDoses=vacinas[b].quantidadeDoses;
                                     estados[i].vacinasDoEstado[a].ativo=1;
                                     estados[i].vacinasDoEstado[a].tipoVacina=tipoVacina;
+                                    
+                                    //Saori alterando aqui
+                                    estados[i].vacinasDoEstado[a].fabricante = vacinas[b].fabricante;
+                                    estados[i].vacinasDoEstado[a].dataVenc = vacinas[b].dataVenc;
                                     break;
                                 }else{
                                 continue;
@@ -95,6 +99,11 @@ void menuTransferirInsumo(){
                                     estados[i].episDoEstado[a].descricaoEPI=epis[b].descricaoEPI;
                                     estados[i].episDoEstado[a].ativo=1;
                                     estados[i].episDoEstado[a].tipoEPI = tipoEPI;
+                                    
+                                    //Saori alterando aqui
+                                    estados[i].episDoEstado[a].fabricante = epis[b].fabricante;
+                                    estados[i].episDoEstado[a].dataVenc = epis[b].dataVenc;
+                                    
                                     break;
                                 }else{
                                 continue;
@@ -136,6 +145,11 @@ void menuTransferirInsumo(){
                                     estados[i].medicamentosDoEstado[a].dosagem=medicamentos[b].dosagem;
                                     estados[i].medicamentosDoEstado[a].nome=nome;
                                     estados[i].episDoEstado[a].ativo=1;
+                                    
+                                    //Saori alterando aqui
+                                    estados[i].medicamentosDoEstado[a].fabricante = medicamentos[b].fabricante;
+                                    estados[i].medicamentosDoEstado[a].dataVenc = medicamentos[b].dataVenc;
+                                    
                                     break;
                                 }else{
                                 continue;
