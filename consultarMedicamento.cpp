@@ -27,6 +27,11 @@ void consultarMedicamento()
             std::cout<<"Administracao do medicamento: "<< medicamentos[i].administracao<<endl;
             std::cout<<"Dosagem do medicamento: "<< medicamentos[i].dosagem<<endl;
             std::cout<<"Quantidade do medicamento: "<< medicamentos[i].quantidadeDmedicamento<<endl;
+            
+            //Saori alterando aqui
+            std::cout << "Fabricante: " << medicamentos[i].fabricante << endl;
+            std::cout << "Data de Vencimento: " << medicamentos[i].dataVenc << endl;
+            
             std::cout<<"\n---------------\n"<<std::endl;
 
         }
