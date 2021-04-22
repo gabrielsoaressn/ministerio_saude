@@ -26,6 +26,12 @@ void consultarVacina()
         std::cout<<"Dose da vacina: "<< vacinas[i].quantidadeDoses<<endl;
         std::cout<<"Intervalo entre as doses: "<< vacinas[i].intervaloDias<<endl;
         std::cout<<"Quantidade de vacinas: "<< vacinas[i].quantidadeDvacina<<endl;
+           
+        //Saori Alterando aqui
+        std::cout << "Fabricante: " << vacinas[i].fabricante << endl;
+        std::cout << "Data de Vencimento: " << vacinas[i].dataVenc << endl;    
+            
+            
         std::cout<<"\n---------------\n"<<std::endl;
 
         }
