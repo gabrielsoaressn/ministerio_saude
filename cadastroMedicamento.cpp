@@ -79,6 +79,8 @@ int funcCadastroMedicamento()
                 medicamentos[i].quantidadeDmedicamento = quantidadeDmedicamento;
                 medicamentos[i].nome = nome;
                 medicamentos[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
+                
+                //Saori alterando aqui
                 medicamentos[i].fabricante = fabricante;
                 medicamento[i].dataVenc = dataVenc;
                 break;
