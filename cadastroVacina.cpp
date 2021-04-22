@@ -13,6 +13,9 @@ using namespace std;
 
 Vacina vacinas[MAX_VACINAS];
 
+//Saori Aqui, coloquei essa variavel, Aqui ela consegue ser puxada para qualquer funcao?
+int quantidadeTotalVacinasMS;
+
 void menuCadastroVacina();
 void cadastrarVacina();
 
@@ -43,7 +46,9 @@ void cadastrarVacina()
         std::cin>>intervaloDias;
         std::cout<<"Quantidade de Vacinas: "<<std::endl;
         std::cin>>quantidadeDvacina;
-    
+        
+        //Saori aqui de Novo, novamente fazer uma variavel para a minha funcao
+        quantidadeTotalVacinasMS += quantidadeDvacina;
     
 
         for(int i = 0; i < MAX_VACINAS; ++i)
