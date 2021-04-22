@@ -16,6 +16,9 @@ using namespace std;
 
 Medicamento medicamentos[MAX_MEDICAMENTOS];
 
+//Variavel da Saori
+int quantidadeTotalMedicamentosMS;
+
 void menuCadastroMedicamento();
 void cadastrarMedicamento();
 
@@ -49,8 +52,9 @@ int funcCadastroMedicamento()
         std::cin>>quantidadeDmedicamento;
         cout<<"nome: "<<endl;
         cin >> nome;
-
-
+        
+        //Variavel da Saori
+        quantidadeTotalMedicamentosMS += quantidadeDmedicamento;
 
 
         for(int i = 0; i < MAX_MEDICAMENTOS; ++i)
