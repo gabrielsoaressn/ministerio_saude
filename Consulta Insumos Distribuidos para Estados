@@ -20,10 +20,10 @@ void ConsultaInsumosDistribuidosParaEstados(){
 
             switch (insumo){
                 case 1:{
-                    if (variavelDaQuantidadeTotalVacinas != 0){
+                    if (quantidadeTotalVacinasMS != 0){
                         cout << "----------------------------------------------------------\n" << endl;
                         cout << "A quantidade de doses de Vacina distribuidas para os Estados eh: "
-                             << variavelDaQuantidadeTotalVacinas << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                             << quantidadeTotalVacinasMS << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
                         cout << "----------------------------------------------------------\n" << endl;
                         cout << "Desejas consultar mais alguma quantidade?" << endl;
                         cout << "Digite 1 para Sim e 0 para Nao" << endl;
@@ -40,10 +40,10 @@ void ConsultaInsumosDistribuidosParaEstados(){
                     }
                 }
                 case 2:{
-                    if (variavelDaQuantidadeTotalEPI != 0){
+                    if (quantidadeTotalEPIMS != 0){
                         cout << "----------------------------------------------------------\n" << endl;
                         cout << "A quantidade de EPI distribuidas para os Estados eh: "
-                             << variavelDaQuantidadeTotalEPI << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                             << quantidadeTotalEPIMS << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
                         cout << "----------------------------------------------------------\n" << endl;
                         cout << "Desejas consultar mais alguma quantidade?" << endl;
                         cout << "Digite 1 para Sim e 0 para Nao" << endl;
@@ -60,10 +60,10 @@ void ConsultaInsumosDistribuidosParaEstados(){
                     }
                 }
                 case 3:{
-                    if (variavelDaQuantidadeTotalMedicamentos != 0){
+                    if (quantidadeTotalMedicamentosMS != 0){
                         cout << "----------------------------------------------------------\n" << endl;
                         cout << "A quantidade de Medicamentos distribuidos para os Estados eh: "
-                             << variavelDaQuantidadeTotalMedicamentos << "\n" <<endl; //Colocar a variavel ou a soma das quantidades por Estado
+                             << quantidadeTotalMedicamentosMS << "\n" <<endl; //Colocar a variavel ou a soma das quantidades por Estado
                         cout << "----------------------------------------------------------\n" << endl;
                         cout << "Desejas consultar mais alguma quantidade?" << endl;
                         cout << "Digite 1 para Sim e 0 para Nao" << endl;
@@ -93,18 +93,18 @@ void ConsultaInsumosDistribuidosParaEstados(){
             cout << "----------------------------------------------------------\n" << endl;
             cout << "Lista Geral dos Insumos Distribuidos para Estados\n" << endl;
             cout << "----------------------------------------------------------\n" << endl;
-                if(variavelDaQuantidadeTotalVacinas != 0){
-                    cout << "Quantidade de Vacinas: " << variavelDaQuantidadeTotalVacinas << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                if(quantidadeTotalVacinasMS != 0){
+                    cout << "Quantidade de Vacinas: " << quantidadeTotalVacinasMS << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
                 }else{
                     cout << "Nenhuma Vacina foi Distribuida.\n" << endl;
                 }
-                if(variavelDaQuantidadeTotalEPI != 0){
-                    cout << "Quantidade de EPI: " << variavelDaQuantidadeTotalEPI << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                if(quantidadeTotalEPIMS != 0){
+                    cout << "Quantidade de EPI: " << quantidadeTotalEPIMS << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
                 }else{
                     cout << "Nenhum EPI foi Distribuido.\n" << endl;
                 }
-                if(variavelDaQuantidadeTotalMedicamentos != 0){
-                    cout << "Quantidade de Medicamento: " << variavelDaQuantidadeTotalMedicamentos << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
+                if(quantidadeTotalMedicamentosMS != 0){
+                    cout << "Quantidade de Medicamento: " << quantidadeTotalMedicamentosMS << "\n" << endl; //Colocar a variavel ou a soma das quantidades por Estado
                 }else{
                     cout << "Nenhum Medicamento foi Distribuido.\n" << endl;
                 }
