@@ -1,3 +1,15 @@
+#ifndef RETORNATODOSINSUMOSDISPONIVEISTIPOESTOQUEMS_CPP
+#define RETORNATODOSINSUMOSDISPONIVEISTIPOESTOQUEMS_CPP
+
+#include <iostream>
+#include <string>
+
+#include "cadastroVacina.cpp"
+#include "cadastroMedicamento.cpp"
+#include "cadastroEPI.cpp"
+
+using namespace std;
+
 void RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
 
      if (quantidadeTotalVacinasMS != 0){ //Para Vacina
@@ -40,3 +52,4 @@ void RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
     }
 
 }
+#endif // RETORNATODOSINSUMOSDISPONIVEISTIPOESTOQUEMS_CPP
