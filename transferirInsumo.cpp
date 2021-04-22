@@ -42,6 +42,10 @@ void menuTransferirInsumo(){
             {
                 if(tipoVacina == vacinas[i].tipoVacina){//o tipo digitado é o de alguma vacina existente?
                     vacinas[i].quantidadeDvacina -= quantidade;//então pode enviar(diminui a quantidade no estoque)
+                    
+                    //Linha de código que talvez eu(saori) precise
+                    quantidadeTotalVacinasMS -= quantidade;
+                    
                     b=i;
                     for(i=0;i<27;i++){
                         if(estados[i].nome==nomeDoEstado){
@@ -86,6 +90,10 @@ void menuTransferirInsumo(){
             {
                 if(tipoEPI == epis[i].tipoEPI){//o tipo digitado é o de alguma vacina existente?
                     epis[i].quantidadeDepi -= quantidade;//então pode enviar(diminui a quantidade no estoque)
+                    
+                    //Linha de código que talvez eu(saori) precise
+                    quantidadeTotalEPIMS -= quantidade;
+                    
                     b=i;
                     for(i=0;i<27;i++){
                         if(estados[i].nome==nomeDoEstado){
@@ -130,6 +138,10 @@ void menuTransferirInsumo(){
             {
                 if(nome == medicamentos[i].nome){//o tipo digitado é o de alguma vacina existente?
                     medicamentos[i].quantidadeDmedicamento -= quantidade;//então pode enviar(diminui a quantidade no estoque)
+                    
+                    //Linha de código que talvez eu(saori) precise
+                    quantidadeTotalMedicamentosMS -= quantidade;
+                    
                     b=i;
                     for(i=0;i<27;i++){
                         if(estados[i].nome==nomeDoEstado){
