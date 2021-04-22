@@ -36,9 +36,11 @@ int funcCadastroEPI()
 
 void cadastrarEPI()
 {
-    string tipoEPI;
+    std::string fabricante;
+    std::string dataVenc;
+    std::string tipoEPI;
     int quantidadeDepi;
-    string descricaoEPI;
+    std::string descricaoEPI;
     int op;
 
     do{
@@ -49,6 +51,12 @@ void cadastrarEPI()
         cin >> descricaoEPI;
         std::cout<<"Quantidade de EPI: "<<std::endl;
         std::cin>>quantidadeDepi;
+        
+        //Saori aqui adicionando ultimas descricoes
+        std::cout << "Fabricante: " << std::endl;
+        cin >> fabricante;
+        std::cout << "Data de vencimento: " <<std::endl;
+        cin >> dataVenc;
         
         quantidadeTotalEPIMS += quantidadeDepi;
     
@@ -61,6 +69,8 @@ void cadastrarEPI()
                 epis[i].tipoEPI = tipoEPI;
                 epis[i].descricaoEPI = descricaoEPI;
                 epis[i].ativo=1; // Atualiza o valor de ativo para 1, fazendo com que o cadastro seja efetivado e permitindo a consulta.
+                epis[i].fabricante = fabricante;
+                epis[i].dataVenc = dataVenc;
                 break;
             }   
         }
