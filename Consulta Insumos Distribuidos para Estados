@@ -13,9 +13,9 @@ void ConsultaInsumosDistribuidosParaEstados(){
         if (x == 1){
             cout << "----------------------------------------------------------\n" << endl;
             cout << "Digite o Insumo que desejas consultar: " << endl;
-            cout<<" 1- Vacina" << endl;
-            cout<<" 2- EPI" << endl;
-            cout<<" 3- Medicamento" << endl;
+            cout<<" 1) Vacina" << endl;
+            cout<<" 2) EPI" << endl;
+            cout<<" 3) Medicamento" << endl;
             cin >> insumo;
 
             switch (insumo){
