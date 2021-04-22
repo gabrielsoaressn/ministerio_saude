@@ -7,6 +7,11 @@
 #include "consultarEPI.cpp"
 #include "consultarVacina.cpp"
 
+//Variaveis da Saori
+int quantidadeTotalVacinasEstados;
+int quantidadeTotalEPIEstados;
+int quantidadeTotalMedicamentosEstados;
+
 void menuTransferirInsumo(){
     int i, quantidade, select, a, b;
     string tipoVacina, nomeDoEstado, tipoEPI, nome;
@@ -29,6 +34,10 @@ void menuTransferirInsumo(){
             cin >> quantidade;
             cout <<"\nEstado: ";
             cin >> nomeDoEstado;
+            
+            //Linha De Codigo da Saori
+            quantidadeTotalVacinasEstados += quantidade;                      
+            
             for(i=0; i<MAX_EPI; ++i)//testando as vacinas existentes para saber se elas batem com a que o usuário deseja enviar
             {
                 if(tipoVacina == vacinas[i].tipoVacina){//o tipo digitado é o de alguma vacina existente?
@@ -65,6 +74,10 @@ void menuTransferirInsumo(){
             cin >> quantidade;
             cout <<"\nEstado: ";
             cin >> nomeDoEstado;
+            
+            //Linha de Codigo da Saori
+            quantidadeTotalEPIEstados += quantidade;
+            
             for(i=0; i<MAX_EPI; ++i)//testando as vacinas existentes para saber se elas batem com a que o usuário deseja enviar
             {
                 if(tipoEPI == epis[i].tipoEPI){//o tipo digitado é o de alguma vacina existente?
@@ -100,6 +113,10 @@ void menuTransferirInsumo(){
             cin >> quantidade;
             cout <<"\nEstado: ";
             cin >> nomeDoEstado;
+            
+            //Linha de Codigo da Saori
+            quantidadeTotalMedicamentosEstados += quantidade;
+            
             for(i=0; i<MAX_EPI; ++i)//testando as vacinas existentes para saber se elas batem com a que o usuário deseja enviar
             {
                 if(nome == medicamentos[i].nome){//o tipo digitado é o de alguma vacina existente?
