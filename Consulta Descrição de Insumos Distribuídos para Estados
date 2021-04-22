@@ -1,6 +1,6 @@
 void ConsultaDescricaoInsumosDistribuidosParaEstados(){
 
-    int y, descricao, n = 1;
+    int y, descricao, n = 1, i;
 
     cout << "----------------------------------------------------------\n" << endl;
     cout << "Essa funcao consulta as descricoes dos Insumos Distribuidos para os Estados\n" << endl;
@@ -20,11 +20,17 @@ void ConsultaDescricaoInsumosDistribuidosParaEstados(){
 
             switch (descricao){
                 case 1:{
-                    if(variavelDaQuantidadeTotalVacinas != 0){
+                    if(quantidadeTotalVacinasEstados != 0){
                         cout << "----------------------------------------------------------\n" << endl;
-                        cout << "Descricao das Vacinas: " << endl;
-                        cout << variavelDaDescricaoVacina << "\n" << endl;
-                        cout << "----------------------------------------------------------\n" << endl;
+                        cout << "Descricao das Vacinas: " << "\n" << endl;
+                        for (i = 0; i < 50; i++){
+                                if(vacinas[i].ativo == 1){
+                                    cout << "Tipo de vacina: "<< vacinas[i].tipoVacina << endl;
+                                    cout << "Dose da vacina: "<< vacinas[i].quantidadeDoses << endl;
+                                    cout << "Intervalo entre as doses: "<< vacinas[i].intervaloDias << endl;
+                                    cout << "----------------------------------------------------------\n" << endl;
+                                }
+                        }
                         cout << "Desejas consultar mais alguma descricao?" << endl;
                         cout << "Digite 1 para Sim e 0 para Nao" << endl;
                         cin >> n;
@@ -40,11 +46,16 @@ void ConsultaDescricaoInsumosDistribuidosParaEstados(){
                     }
                 }
                 case 2:{
-                    if(variavelDaQuantidadeTotalEPI != 0){
+                    if(quantidadeTotalEPIEstados != 0){ //verEssaVariavel
                         cout << "----------------------------------------------------------\n" << endl;
-                        cout << "Descricao das Vacinas: " << endl;
-                        cout << variavelDaDescricaoEPI << "\n" << endl;
-                        cout << "----------------------------------------------------------\n" << endl;
+                        cout << "Descricao de EPI: " << "\n" << endl;
+                        for(i = 0; i < 50; i++){
+                            if(epis[i].ativo == 1){
+                                cout << "Tipo da EPI: " << epis[i].tipoEPI << endl;
+                                cout << "Descricao da EPI: " << epis[i].descricaoEPI << endl;
+                                cout << "----------------------------------------------------------\n" << endl;
+                            }
+                        }
                         cout << "Desejas consultar mais alguma descricao?" << endl;
                         cout << "Digite 1 para Sim e 0 para Nao" << endl;
                         cin >> n;
@@ -60,11 +71,17 @@ void ConsultaDescricaoInsumosDistribuidosParaEstados(){
                     }
                 }
                 case 3:{
-                    if(variavelDaQuantidadeTotalMedicamentos != 0){
+                    if(quantidadeTotalMedicamentosEstados != 0){
                         cout << "----------------------------------------------------------\n" << endl;
-                        cout << "Descricao dos Medicamentos: " << endl;
-                        cout << variavelDaDescricaoMedicamento << "\n" << endl;
-                        cout << "----------------------------------------------------------\n" << endl;
+                        cout << "Descricao dos Medicamentos: " << "\n" << endl;
+                        for (i = 0; i < 50; i++){
+                            if(medicamentos[i].ativo == 1){
+                                cout << "Disponibilizacao do medicamento: \n"<< medicamentos[i].disponibilizacao << endl;
+                                cout << "Administracao do medicamento: \n"<< medicamentos[i].administracao << endl;
+                                cout << "Dosagem do medicamento: \n"<< medicamentos[i].dosagem << endl;
+                                cout << "----------------------------------------------------------\n" << endl;
+                            }
+                        }
                         cout << "Desejas consultar mais alguma descricao?" << endl;
                         cout << "Digite 1 para Sim e 0 para Nao" << endl;
                         cin >> n;
@@ -93,25 +110,43 @@ void ConsultaDescricaoInsumosDistribuidosParaEstados(){
             cout << "----------------------------------------------------------\n" << endl;
             cout << "Lista de Todas as Descricoes dos Insumos Distribuidos para Estados\n" << endl;
             cout << "----------------------------------------------------------\n" << endl;
-                if(variavelDaQuantidadeTotalVacinas != 0){
+                if(QuantidadeTotalVacinasEstados != 0){
                     cout << "Descricao das Vacinas: " << endl;
-                    cout << variavelDaDescricaoVacina << "\n" << endl;
+                    for (i = 0; i < 50; i++){
+                        if(vacinas[i].ativo == 1){
+                            cout << "Tipo de vacina: "<< vacinas[i].tipoVacina << endl;
+                            cout << "Dose da vacina: "<< vacinas[i].quantidadeDoses << endl;
+                            cout << "Intervalo entre as doses: "<< vacinas[i].intervaloDias << endl;
+                            cout << "----------------------------------------------------------\n" << endl;
+                        }
+                    }
                 }else{
                     cout << "Indisponivel por falta no estoque.\n" << endl;
                     cout << "----------------------------------------------------------\n" << endl;
                 }
-                if(variavelDaQuantidadeTotalEPI != 0){
+                if(QuantidadeTotalEPIEstados != 0){
                     cout << "Descricao das Vacinas: " << endl;
-                    cout << variavelDaDescricaoEPI << "\n" << endl;
-                    cout << "----------------------------------------------------------\n" << endl;
+                        for(i = 0; i < 50; i++){
+                            if(epis[i].ativo == 1){
+                                cout << "Tipo da EPI: " << epis[i].tipoEPI << endl;
+                                cout << "Descricao da EPI: " << epis[i].descricaoEPI << endl;
+                                cout << "----------------------------------------------------------\n" << endl;
+                            }
+                        }
                 }else{
                     cout << "Indisponivel por falta no estoque.\n" << endl;
                     cout << "----------------------------------------------------------\n" << endl;
                     }
-                if(variavelDaQuantidadeTotalMedicamentos != 0){
+                if(QuantidadeTotalMedicamentosEstados != 0){
                     cout << "Descricao dos Medicamentos: " << endl;
-                    cout << variavelDaDescricaoMedicamento << "\n" << endl;
-                    cout << "----------------------------------------------------------\n" << endl;
+                        for (i = 0; i < 50; i++){
+                            if(medicamentos[i].ativo == 1){
+                                cout << "Disponibilizacao do medicamento: \n"<< medicamentos[i].disponibilizacao << endl;
+                                cout << "Administracao do medicamento: \n"<< medicamentos[i].administracao << endl;
+                                cout << "Dosagem do medicamento: \n"<< medicamentos[i].dosagem << endl;
+                                cout << "----------------------------------------------------------\n" << endl;
+                            }
+                        }
                 }else{
                     cout << "Indisponivel por falta no estoque.\n" << endl;
                     cout << "----------------------------------------------------------\n" << endl;
