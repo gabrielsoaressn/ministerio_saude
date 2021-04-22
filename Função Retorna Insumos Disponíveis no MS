@@ -1,30 +1,42 @@
-void Insumos::RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
+void RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
 
      if (quantidadeDoses != 0){ //Para Vacina
-        cout << "Doses de Vacinas Disponiveis no Estoque do MS" << endl;
-        cout << "Quantidade: " << quantidadeDoses << endl;
-        //return 1;
+        cout << "----------------------------------------------------------\n" << endl;
+        cout << "Vacinas Disponiveis no Estoque do MS" << endl;
+        cout << "Quantidade: " << quantidadeDoses << "\n" << endl;
+        cout << "----------------------------------------------------------\n" << endl;
+
     }else{
-        cout << "Vacinas estao Indisponiveis no Estoque do MS" << endl;
-        //return 0;
+        cout << "----------------------------------------------------------\n" << endl;
+        cout << "Vacinas estao Indisponiveis no Estoque do MS.\n" << endl;
+        cout << "----------------------------------------------------------\n" << endl;
+
     }
 
     if (quantidadeEPI != 0){ //Para EPI
+
         cout << "EPI Disponivel no Estoque do MS" << endl;
-        cout << "Quantidade: " << quantidadeEPI << endl;
-        //return 1; //Não sei o que necessariamente precisa ser retornado
+        cout << "Quantidade: " << quantidadeEPI << "\n" << endl;
+        cout << "----------------------------------------------------------\n" << endl;
+
     }else{
-        cout << "EPI Indisponivel no Estoque do MS" << endl;
-        //return 0;
+
+        cout << "EPI Indisponivel no Estoque do MS.\n" << endl;
+        cout << "----------------------------------------------------------\n" << endl;
+
     }
 
     if (quantidadeDmedicamento != 0){ //Para Medicamento
+
         cout << "Medicamentos Disponivel no Estoque do MS" << endl;
-        cout << "Quantidade: " << quantidadeDmedicamento << endl;
-        //return 1;
+        cout << "Quantidade: " << quantidadeDmedicamento << "\n" << endl;
+        cout << "----------------------------------------------------------\n" << endl;
+
     }else{
-        cout << "Medicamentos Indisponiveis no Estoque do MS" << endl;
-        //return 0;
+
+        cout << "Medicamentos Indisponiveis no Estoque do MS.\n" << endl;
+        cout << "----------------------------------------------------------\n" << endl;
+
     }
 
 }
