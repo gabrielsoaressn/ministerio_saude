@@ -1,9 +1,9 @@
 void RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
 
-     if (quantidadeDoses != 0){ //Para Vacina
+     if (quantidadeTotalVacinasMS != 0){ //Para Vacina
         cout << "----------------------------------------------------------\n" << endl;
         cout << "Vacinas Disponiveis no Estoque do MS" << endl;
-        cout << "Quantidade: " << quantidadeDoses << "\n" << endl;
+        cout << "Quantidade: " << quantidadeTotalVacinasMS << "\n" << endl;
         cout << "----------------------------------------------------------\n" << endl;
 
     }else{
@@ -13,10 +13,10 @@ void RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
 
     }
 
-    if (quantidadeEPI != 0){ //Para EPI
+    if (quantidadeTotalEPIMS != 0){ //Para EPI
 
         cout << "EPI Disponivel no Estoque do MS" << endl;
-        cout << "Quantidade: " << quantidadeEPI << "\n" << endl;
+        cout << "Quantidade: " << quantidadeTotalEPIMS << "\n" << endl;
         cout << "----------------------------------------------------------\n" << endl;
 
     }else{
@@ -26,10 +26,10 @@ void RetornaTodosInsumoDisponiveisTipoEstoqueMS(){
 
     }
 
-    if (quantidadeDmedicamento != 0){ //Para Medicamento
+    if (quantidadeTotalMedicamentosMS != 0){ //Para Medicamento
 
         cout << "Medicamentos Disponivel no Estoque do MS" << endl;
-        cout << "Quantidade: " << quantidadeDmedicamento << "\n" << endl;
+        cout << "Quantidade: " << quantidadeTotalMedicamentosMS << "\n" << endl;
         cout << "----------------------------------------------------------\n" << endl;
 
     }else{
