@@ -1,3 +1,16 @@
+#ifndef CONSULTAINSUMOSDISTRIBUIDOSPARAESTADOS_CPP
+#define CONSULTAINSUMOSDISTRIBUIDOSPARAESTADOS_CPP
+
+#include <iostream>
+#include <string>
+#include "transferirInsumo.cpp"
+#include "structEstado.cpp"
+#include "consultarMedicamento.cpp"
+#include "consultarEPI.cpp"
+#include "consultarVacina.cpp"
+
+using namespace std;
+
 void ConsultaInsumosDistribuidosParaEstados(){
 
     int x, insumo, m = 1;
@@ -119,3 +132,4 @@ void ConsultaInsumosDistribuidosParaEstados(){
         }
     }
 }
+#endif
