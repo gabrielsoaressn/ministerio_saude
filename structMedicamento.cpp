@@ -5,6 +5,8 @@
 typedef struct 
 {
     int dosagem;
+    std::string fabricante;
+    std::string dataVenc;
     std::string administracao;
     std::string disponibilizacao;
     std::string nome;
